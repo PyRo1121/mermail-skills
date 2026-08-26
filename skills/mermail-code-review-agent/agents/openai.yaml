@@ -1,0 +1,11 @@
+interface:
+  display_name: "Mermail Code Review Agent"
+  short_description: "Review emailed GitHub PRs and reply with a structured review"
+  default_prompt: "Use $mermail-code-review-agent when the job is reviewing a GitHub pull request or pasted diff emailed to a Mermail inbox and drafting a structured review reply."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mermail"
+      description: "Mermail workspace and mailbox MCP server"
+      transport: "streamable_http"
+      url: "https://console.mermail.app/mcp"
